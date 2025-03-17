@@ -1,15 +1,41 @@
 :root {
-  background-color: #000;
-  --color-text: #ffffff;
+  background-color: rgb(5, 0, 30); /* Deep Charcoal Gray */
+  --color-text: rgb(230, 230, 230); /* Off-White for primary text */
+  --color-secondary-text: rgb(150, 150, 150); /* Light Gray for secondary text */
+}
+
+.Navbar {
+  position: fixed;
+  top: 10.5%;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  z-index: 100;
+}
+
+.Navbar-container {
+  display: flex;
+  width: 80%;
+  max-width: 600px;
+  justify-content: center;
+  align-items: center;
+}
+
+.Navbar-icon {
+  width: 24px;
+  height: 24px;
+  margin-left: 15px;
+  margin-right: 15px;
 }
 
 .Background {
   position: fixed;
   background: radial-gradient(
     71.43% 62.3% at 46.43% 36.43%,
-    rgba(0, 0, 0, 0) 15%,
-    rgba(211, 125, 125, 0.5) 56.35%,
-    rgb(0, 149, 255) 100%
+    rgba(5, 0, 30, 0) 15%, /* Deep Charcoal Gray - transparent */
+    rgba(200, 50, 50, 0.5) 56.35%, /* Muted Crimson Red */
+    rgb(250, 140, 80) 100% /* Warm Sunset Orange */
   );
   box-shadow: 0px 12.93px 28.74px 0px #ffd28db2 inset;
   border-radius: 50%;
@@ -108,12 +134,12 @@ text {
 
 .Description {
   font-size: 20px;
-  color: rgba(255, 255, 255, 0.85);
+  color: var(--color-text); /* Primary Text Color */
   margin: 15rpx;
 }
 
 .Hint {
   font-size: 12px;
   margin: 5px;
-  color: rgba(255, 255, 255, 0.65);
+  color: var(--color-secondary-text); /* Secondary Text Color - Light Gray */
 }

@@ -19,6 +19,15 @@ export function App() {
 
   return (
     <view>
+      <view className="Navbar">
+        <view className="Navbar-container">
+          <image className="Navbar-icon" src={arrow} />
+          <image className="Navbar-icon" src={arrow} />
+          <image className="Navbar-icon" src={arrow} />
+          <image className="Navbar-icon" src={arrow} />
+        </view>
+      </view>
+
       <view className="Background" />
       <view className="App">
         <view className="Banner">
