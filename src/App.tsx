@@ -41,15 +41,7 @@ export function App() {
           <text className="Title">React</text>
           <text className="Subtitle">on Lynx</text>
         </view>
-        <view className="Content">
-          <image src={arrow} className="Arrow" />
-          <text className="Description">Tap the logo and have fun!</text>
-          <text className="Hint">
-            Edit<text style={{ fontStyle: 'normal' }}>{' src/App.tsx '}</text>
-            to see updates!
-          </text>
-        </view>
-        <view style={{ flex: 1 }} />
+        <view style={{ flex: 1.2 }} />
       </view>
     </view>
   );
