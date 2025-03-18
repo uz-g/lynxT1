@@ -28,26 +28,19 @@ export function App() {
     <view>
       <view className="Navbar">
         <view className="Navbar-container">
-          {[0, 1, 2, 3].map((index) => {
-            const handleTap = () => onIconTap(index);
-            return (
-              <view 
-                key={index}
-                className={`Navbar-icon-wrapper ${selectedIcon === index ? 'Navbar-icon-selected' : ''}`}
-                bindtap={handleTap}
-              >
-                <image 
-                  className="Navbar-icon" 
-                  src={clock} 
-                  bindtap={(e) => {
-                    // Stop propagation and handle the event directly
-                    e.stopPropagation && e.stopPropagation();
-                    handleTap();
-                  }} 
-                />
-              </view>
-            );
-          })}
+          {[0, 1, 2, 3].map((index) => (
+            <view 
+              key={index}
+              className={`Navbar-icon-wrapper ${selectedIcon === index ? 'Navbar-icon-selected' : ''}`}
+              bindtap={() => onIconTap(index)}
+            >
+              <image 
+                className="Navbar-icon" 
+                src={clock} 
+                bindtap={() => onIconTap(index)} 
+              />
+            </view>
+          ))}
         </view>
       </view>
 
