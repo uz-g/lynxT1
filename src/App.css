@@ -22,11 +22,27 @@
   align-items: center;
 }
 
+.Navbar-icon-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 16px;
+  border-radius: 24px;
+  margin-left: 6px;
+  margin-right: 6px;
+  min-width: 60px;
+  min-height: 44px;
+  position: relative;
+}
+
+.Navbar-icon-selected {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
 .Navbar-icon {
-  width: 21px;
-  height: 21px;
-  margin-left: 19px;
-  margin-right: 19px;
+  width: 28px;
+  height: 28px;
+  pointer-events: none;
 }
 
 .Background {
