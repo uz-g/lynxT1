@@ -19,28 +19,53 @@ export function App() {
     setAlterLogo(!alterLogo);
   }, [alterLogo]);
 
-  const onIconTap = useCallback((index: number) => {
+  const onNavTap0 = useCallback(() => {
     'background only';
-    setSelectedIcon(index);
-  }, []);
+    setSelectedIcon(0);
+  }, [0]);
+
+  const onNavTap1 = useCallback(() => {
+    'background only';
+    setSelectedIcon(1);
+  }, [1]);
+
+  const onNavTap2 = useCallback(() => {
+    'background only';
+    setSelectedIcon(2);
+  }, [2]);
+
+  const onNavTap3 = useCallback(() => {
+    'background only';
+    setSelectedIcon(3);
+  }, [3]);
 
   return (
     <view>
       <view className="Navbar">
         <view className="Navbar-container">
-          {[0, 1, 2, 3].map((index) => (
-            <view 
-              key={index}
-              className={`Navbar-icon-wrapper ${selectedIcon === index ? 'Navbar-icon-selected' : ''}`}
-              bindtap={() => onIconTap(index)}
-            >
-              <image 
-                className="Navbar-icon" 
-                src={clock} 
-                bindtap={() => onIconTap(index)} 
-              />
-            </view>
-          ))}
+          {/* Button 0 */}
+          <view className="Icon" bindtap={onNavTap0}>
+            <image className="Icon--navbar" src={clock} />
+            {selectedIcon === 0 && <view className="Navbar-button-highlight" />}
+          </view>
+          
+          {/* Button 1 */}
+          <view className="Icon" bindtap={onNavTap1}>
+            <image className="Icon--navbar" src={clock} />
+            {selectedIcon === 1 && <view className="Navbar-button-highlight" />}
+          </view>
+          
+          {/* Button 2 */}
+          <view className="Icon" bindtap={onNavTap2}>
+            <image className="Icon--navbar" src={clock} />
+            {selectedIcon === 2 && <view className="Navbar-button-highlight" />}
+          </view>
+          
+          {/* Button 3 */}
+          <view className="Icon" bindtap={onNavTap3}>
+            <image className="Icon--navbar" src={clock} />
+            {selectedIcon === 3 && <view className="Navbar-button-highlight" />}
+          </view>
         </view>
       </view>
 

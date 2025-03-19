@@ -22,26 +22,26 @@
   align-items: center;
 }
 
-.Navbar-icon-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 8px 16px;
-  border-radius: 24px;
-  margin-left: 6px;
-  margin-right: 6px;
-  min-width: 60px;
-  min-height: 44px;
+.Icon {
   position: relative;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-.Navbar-icon-selected {
-  background-color: rgba(255, 255, 255, 0.2);
-}
-
-.Navbar-icon {
+.Icon--navbar {
   width: 28px;
   height: 28px;
+}
+
+.Navbar-button-highlight {
+  position: absolute;
+  width: 60px;
+  height: 40px;
+  border-radius: 24px;
+  background-color: rgba(255, 255, 255, 0.2);
+  z-index: 0;
 }
 
 .Background {
