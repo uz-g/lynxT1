@@ -1,3 +1,6 @@
+TESTING LYNX.JS
+
+
 ## Rspeedy project
 
 This is a ReactLynx project bootstrapped with `create-rspeedy`.
